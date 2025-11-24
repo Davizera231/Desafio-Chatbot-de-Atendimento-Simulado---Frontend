@@ -100,4 +100,28 @@ src
 * 3. Comunicação com API Django via serviços Axios
 * 4. Renderização condicional baseada no estado 
 
+# Decisão de Arquitetura
+
+## Decisão: Usar useState para gerenciamento de estado em vez de redux/context
+
+## Justificativa: 
+* Simplicidade: Estado minimo necessário para funcionalidades
+* Performance: Evita complexidade desnecessária
+* Manutenção: Fácil de entender e modificar
+
+## Decisão: Separar componentes por funcionalidade especifica.
+
+## Justificativa:
+* Single Responsibility: Cada componente tem uma única responsabilidade
+* Reusabilidade: Fácil reutilizar componentes em outros projetos
+* Testabilidade: Componentes isolados são mais fáceis de testar 
+
+## Decisão: Criar camada de serviço dedicada para comunicação com backend. 
+
+## Justificativa: 
+* Separação de Lógica: Lógica de API separada da UI
+* Manutenção: Mudanças na API afetam apenas um arquivo
+* Reusabilidade: Mesmos serviços podem ser usados em diferentes componentes
+* Testabilidade: Fácil mockar chamadas de API em testes
+
 
