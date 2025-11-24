@@ -101,3 +101,33 @@ src
 * 4. Renderização condicional baseada no estado 
 
 
+# Decisões de Arquitetura
+
+### Decisão: Usar useState para gerenciamento de estado em vez de Redux/Context. 
+
+### Justificativa 
+* Simplicidade: Estado mínimo necessário para funcionalidades
+
+* Performance: Evita complexidade desnecessária
+
+* Manutenção: Fácil de entender e modificar
+
+* Prop Drilling Controlado: Apenas 1 nível de profundidade 
+
+### Decisão: Separar componentes por funcionalidade específica. 
+
+### Justificativa: 
+* Single Responsibility: Cada componente tem uma única responsabilidade
+
+* Reusabilidade: Fácil reutilizar componentes em outros projetos
+
+* Testabilidade: Componentes isolados são mais fáceis de testar 
+
+### Decisão: Criar camada de serviço dedicada para comunicação com backend. 
+
+### Justificativa: 
+* Manutenção: Mudanças na API afetam apenas um arquivo
+
+* Reusabilidade: Mesmos serviços podem ser usados em diferentes componentes
+
+* Testabilidade: Fácil mockar chamadas de API em testes
