@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Projeto Chatbot de Atendimento Simulado - Frontend 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição 
+Este projeto consiste em um sistema fullstack de chat simulado desenvolvido para demonstrar habilidades em desenvolvimento web com Django e React. A aplicação frontend oferece uma interface intuitiva para interação com um chatbot simulado, permitindo aos usuários alternar entre dois perfis diferentes ("Usuário A" e "Usuário B") e visualizar históricos de conversas específicos para cada perfil.
 
-## Available Scripts
+O sistema simula um ambiente de atendimento ao cliente onde diferentes usuários recebem respostas personalizadas do chatbot, com todas as interações sendo armazenadas e recuperadas através de uma API REST. A aplicação foi desenvolvida com foco em usabilidade, responsividade e integração eficiente com o backend Django. 
 
-In the project directory, you can run:
+* [Backend Django](https://github.com/Davizera231/Desafio-Chatbot-de-Atendimento-Simulado---Backend) 
 
-### `npm start`
+# Pré-requisitos 
+* React 19.2.0
+* Bootstrap 5.3.8
+* React-dom 19.2.0
+* React-router-dom 7.9.6
+* Axios 1.13.2
+* React script 5.0.1
+* Node.js 14.17.3+ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Instalação 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone o repositório: 
+```
+git clone https://link-do-repo-frontend.git
 
-### `npm test`
+``` 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Navegue até o diretório do projeto: 
+```
+cd desafio-chatbot-de-atendimento-simulado-frontend
 
-### `npm run build`
+``` 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Instale as dependências: 
+### Com npm: 
+```
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Inicie o projeto: 
+### Com npm: 
+```
+npm start
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Funcionalidade Principais 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Login Simulado 
+* Seleção entre "Usuário A" e "Usuário B" através de interface intuitiva 
+* Estado do usuário mantido durante a sessão
+* Navegação dinâmica baseada no usuário selecionado 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Sisttema de chat
+* Interface de chat em tempo real 
+* Envio de mensagens para a API Django
+* Respostas automáticas personalizadas por usuário
+* Design responsivo e moderno com Boostrap 
+* Indicadores de digitação e status de envio 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Histórico de Conversas 
+* Visualização do histórico filtrado por usuário 
+* Atualização automática ao alternar entre usuários 
+* Exibição de data e hora das interações 
+* Layout organizado com diferenciação visual entre perguntas e respostas 
 
-## Learn More
+# Estrutura do Projeto 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+src
+    │   App.js
+    │   App.test.js
+    │   index.css
+    │   index.js
+    │   logo.svg
+    │   reportWebVitals.js
+    │   setupTests.js
+    │
+    ├───components
+    │       Button.js
+    │       Chat.js
+    │       ChatHistory.js
+    │       Input.js
+    │       Navbar.js
+    │       UserSelector.js
+    │
+    ├───services
+    │       api.js
+    │
+    └───styles
+            App.css
+            Chat.css
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Fluxo de Dados
+* 1. Seleção do usuário no componente "UserSelector"
+* 2. Navegação entre Chat e Histórico 
+* 3. Comunicação com API Django via serviços Axios
+* 4. Renderização condicional baseada no estado 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
